@@ -1,4 +1,4 @@
-![cv](https://github.com/BartoszJarocki/cv/assets/1017620/79bdb9fc-0b20-4d2c-aafe-0526ad4a71d2)
+![cv](https://github.com/commotion-so/commotion/assets/6579532/b7e99939-fdb9-4d37-a616-3dd177fe6d72)
 
 # Minimalist CV
 
