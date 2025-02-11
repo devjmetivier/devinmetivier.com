@@ -104,6 +104,14 @@ export const RESUME_DATA = {
   ],
   contributions: [
     {
+      package: 'typekey',
+      description: 'Generate consistent, type-safe cache keys from a structured dictionary',
+      link: {
+        label: 'typekey',
+        href: 'https://github.com/delicious-simplicity/typekey',
+      },
+    },
+    {
       package: 'hookit',
       description: 'Some nifty React hooks',
       link: {

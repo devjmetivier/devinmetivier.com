@@ -14,7 +14,7 @@ export const TenureTooltip = ({ entry }: Props) => {
   return (
     <div className='text-gray-500 text-sm tabular-nums'>
       <TooltipProvider>
-        <Tooltip>
+        <Tooltip delayDuration={0}>
           <TooltipTrigger>
             {format(entry.start, 'MMM yyyy')} -{' '}
             {entry.end.setHours(0, 0, 0, 0) === new Date().setHours(0, 0, 0, 0)
