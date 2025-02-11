@@ -36,8 +36,8 @@ export const RESUME_DATA = {
     {
       school: 'Full Sail University',
       degree: 'Web Design & Development (BS)',
-      start: new Date(2013, 8, 1),
-      end: new Date(2015, 11, 1),
+      start: new Date(Date.UTC(2013, 8, 1, 5)),
+      end: new Date(Date.UTC(2015, 11, 1, 5)),
     },
   ],
   work: [
@@ -46,28 +46,28 @@ export const RESUME_DATA = {
       link: 'https://www.delicious-simplicity.com',
       badges: ['Remote'],
       title: 'Senior Software Engineer',
-      start: new Date(2021, 7, 1),
-      end: new Date(),
+      start: new Date(Date.UTC(2021, 7, 1, 5)),
+      end: new Date(new Date().setHours(5, 0, 0, 0)),
       description:
-        'Currently orchestrating services to create a seamless experience for our customers and their users. Focusing mainly on publications, nonprofit organizations, e-commerce and video content platforms. Technologies: React, Next.js, Node.js, tRPC and more.', // TODO
+        'Currently orchestrating services to create a seamless experience for our customers and their users. Focusing mainly on publications, nonprofit organizations, e-commerce and video content platforms. Technologies: React, Next.js, Node.js, tRPC and more.',
     },
     {
       company: 'Little Caesars Pizza',
       link: 'https://littlecaesars.com',
       badges: ['Hybrid', 'Remote'],
       title: 'Software Engineer',
-      start: new Date(2019, 5, 1),
-      end: new Date(2021, 7, 1),
+      start: new Date(Date.UTC(2019, 5, 1, 5)),
+      end: new Date(Date.UTC(2021, 7, 1, 5)),
       description:
-        'Created internal tools for managing restaurant menus & digital displays across the globe. Built and shipped Little Caesars online ordering on the web. Lead efforts for build and general application optimizations for web properties. Technologies: React, Gatsby, GraphQL, Node.js, and more.', // TODO
+        'Created internal tools for managing restaurant menus & digital displays across the globe. Built and shipped Little Caesars online ordering on the web. Lead efforts for build and general application optimizations for web properties. Technologies: React, Gatsby, GraphQL, Node.js, and more.',
     },
     {
       company: 'Nextep Systems',
       link: 'https://www.nextepsystems.com',
       badges: [],
       title: 'Web Developer',
-      start: new Date(2018, 2, 1),
-      end: new Date(2019, 5, 1),
+      start: new Date(Date.UTC(2018, 2, 1, 5)),
+      end: new Date(Date.UTC(2019, 5, 1, 5)),
       description:
         'Built self-service kiosk software for the Fast Casual Restaurant and Convenience Retail industries. Customers included: Subway, Which Wich, Wow Bao and Buffalo Boss.',
     },
@@ -76,8 +76,8 @@ export const RESUME_DATA = {
       link: 'https://www.revize.com',
       badges: [],
       title: 'Web Developer',
-      start: new Date(2017, 2, 1),
-      end: new Date(2018, 2, 1),
+      start: new Date(Date.UTC(2017, 2, 1, 5)),
+      end: new Date(Date.UTC(2018, 2, 1, 5)),
       description: 'Built municipal websites across the continental US.',
     },
   ],
