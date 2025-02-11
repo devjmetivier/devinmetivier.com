@@ -1,16 +1,15 @@
-import { differenceInMonths, differenceInYears, format } from 'date-fns';
 import { GlobeIcon, MailIcon } from 'lucide-react';
 import type { Metadata } from 'next';
 
 import { CommandMenu } from '~/components/command-menu';
 import { ContributionCard } from '~/components/contribution-card';
 import { ProjectCard } from '~/components/project-card';
+import { TenureTooltip } from '~/components/tenure-tooltip';
 import { Avatar, AvatarFallback, AvatarImage } from '~/components/ui/avatar';
 import { Badge } from '~/components/ui/badge';
 import { Button } from '~/components/ui/button';
 import { Card, CardContent, CardHeader } from '~/components/ui/card';
 import { Section } from '~/components/ui/section';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '~/components/ui/tooltip';
 import { RESUME_DATA } from '~/data/resume-data';
 
 export const metadata: Metadata = {
@@ -97,21 +96,7 @@ export default function Page() {
                         ))}
                       </span>
                     </h3>
-                    <div className='text-gray-500 text-sm tabular-nums'>
-                      <TooltipProvider>
-                        <Tooltip>
-                          <TooltipTrigger>
-                            {format(work.start, 'MMM yyyy')} -{' '}
-                            {work.end.setHours(0, 0, 0, 0) === new Date().setHours(0, 0, 0, 0)
-                              ? 'Present'
-                              : format(work.end, 'MMM yyyy')}
-                          </TooltipTrigger>
-                          <TooltipContent>
-                            <p>{`${differenceInYears(work.end, work.start)}yr ${differenceInMonths(work.end, work.start) % 12}mo`}</p>
-                          </TooltipContent>
-                        </Tooltip>
-                      </TooltipProvider>
-                    </div>
+                    <TenureTooltip entry={work} />
                   </div>
 
                   <h4 className='font-mono text-sm leading-none print:text-[12px]'>{work.title}</h4>
@@ -129,18 +114,7 @@ export default function Page() {
                 <CardHeader>
                   <div className='flex items-center justify-between gap-x-2 text-base'>
                     <h3 className='font-semibold leading-none'>{education.school}</h3>
-                    <div className='text-gray-500 text-sm tabular-nums'>
-                      <TooltipProvider>
-                        <Tooltip>
-                          <TooltipTrigger>
-                            {format(education.start, 'MMM yyyy')} - {format(education.end, 'MMM yyyy')}
-                          </TooltipTrigger>
-                          <TooltipContent>
-                            <p>{`${differenceInYears(education.end, education.start)}yr ${differenceInMonths(education.end, education.start) % 12}mo`}</p>
-                          </TooltipContent>
-                        </Tooltip>
-                      </TooltipProvider>
-                    </div>
+                    <TenureTooltip entry={education} />
                   </div>
                 </CardHeader>
                 <CardContent className='mt-2 print:text-[12px]'>{education.degree}</CardContent>
