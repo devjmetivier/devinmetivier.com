@@ -1,4 +1,5 @@
-import { GitHubIcon } from '~/components/icons/GitHubIcon';
+import { SiGithub, SiX } from '@icons-pack/react-simple-icons';
+
 import { LinkedInIcon } from '~/components/icons/LinkedInIcon';
 
 export const RESUME_DATA = {
@@ -18,18 +19,18 @@ export const RESUME_DATA = {
       {
         name: 'GitHub',
         url: 'https://github.com/devjmetivier',
-        icon: GitHubIcon,
+        icon: SiGithub,
       },
       {
         name: 'LinkedIn',
         url: 'https://www.linkedin.com/in/devjmetivier/',
         icon: LinkedInIcon,
       },
-      // {
-      //   name: 'X',
-      //   url: 'https://x.com/devjmetivier',
-      //   icon: XIcon,
-      // },
+      {
+        name: 'X',
+        url: 'https://x.com/devjmetivier',
+        icon: SiX,
+      },
     ],
   },
   education: [

@@ -17,6 +17,8 @@ export const metadata: Metadata = {
   description: RESUME_DATA.about,
 };
 
+export const revalidate = 86400;
+
 export default function Page() {
   return (
     <main className='container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16 print:p-12'>
